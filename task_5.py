@@ -22,4 +22,23 @@ def cipher(text, shift):
 
 
 def decipher(text, shift):
-    pass
+    result = ""
+    for character in text:
+        if character == " ":
+            result = result + character
+        elif character.isupper():
+            character = ord(character)
+            character = character - shift
+            if character < 65:
+                character = character + 26
+            character = chr(character)
+            result = result + character
+        else:
+            character = ord(character)
+            character = character - shift
+            if character < 97:
+                character = character + 26
+            character = chr(character)
+            result = result + character
+
+    return result
