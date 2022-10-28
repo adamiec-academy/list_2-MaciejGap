@@ -5,22 +5,21 @@ def cipher(text, shift):
             result = result + character
         elif character.isupper():
             character = ord(character)
-            if character >= 90:
-                character = character - 26
             character = character + shift
+            if character > 90:
+                character = character - 26
             character = chr(character)
             result = result + character
         else:
             character = ord(character)
-            if character >= 122:
-                character = character - 26
             character = character + shift
+            if character > 122:
+                character = character - 26
             character = chr(character)
             result = result + character
 
     return result
 
 
-def decipher(text, shifter):
+def decipher(text, shift):
     pass
-
