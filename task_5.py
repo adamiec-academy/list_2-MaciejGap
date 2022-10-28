@@ -21,3 +21,6 @@ def cipher(text, shift):
     return result
 
 
+def decipher(text, shifter):
+    pass
+
